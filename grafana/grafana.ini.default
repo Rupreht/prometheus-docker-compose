@@ -1,0 +1,55 @@
+instance_name = pub.rupreht.ru
+
+#################################### Server ####################################
+[server]
+# Protocol (http, https, socket)
+;protocol = https
+
+# The ip address to bind to, empty will bind to all interfaces
+;http_addr =
+
+# The http port to use
+;http_port =
+
+# The public facing domain name used to access grafana from a browser
+domain = pub.rupreht.ru
+
+# Redirect to correct domain if host header does not match domain
+# Prevents DNS rebinding attacks
+;enforce_domain = false
+
+# The full public facing url you use in browser, used for redirects and emails
+# If you use reverse proxy and sub path specify full url (with sub path)
+root_url = https://example.ru
+
+# Log web requests
+;router_logging = false
+
+# the path relative working path
+;static_root_path = public
+
+# enable gzip
+enable_gzip = true
+
+# https certs & key file
+;cert_file =
+;cert_key =
+
+# Unix socket path
+;socket =
+
+#################################### SMTP / Emailing ##########################
+[smtp]
+enabled = true
+host = smtp.yandex.ru:465
+user = 
+# If the password contains # or ; you have to wrap it with trippel quotes. Ex """#password;"""
+password = 
+;cert_file =
+;key_file =
+;skip_verify = false
+from_address = 
+from_name = Grafana
+# EHLO identity in SMTP dialog (defaults to instance_name)
+ehlo_identity = example.ru
+
